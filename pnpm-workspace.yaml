@@ -1,0 +1,20 @@
+catalogMode: prefer
+
+catalog:
+  '@elysia/node': ^1.4.6
+  '@module-federation/vite': ^1.23.6
+  '@stylistic/eslint-plugin': ^5.10.0
+  '@types/node': ^24
+  elysia: ^1.4.30
+  env-runner: ^0.3.10
+  srvx: ^1.0.8
+  typescript: ^7.0.2
+  vite: npm:@voidzero-dev/vite-plus-core@1.4.0
+  vite-plus: 1.4.0
+overrides:
+  vite@*: 'catalog:'
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: '*'

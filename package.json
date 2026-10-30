@@ -1,0 +1,60 @@
+{
+  "name": "vite-elysia",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Vite plugin for Elysia servers in Node.js and Bun child processes",
+  "homepage": "https://github.com/YanChenBai/vite-elysia#readme",
+  "bugs": {
+    "url": "https://github.com/YanChenBai/vite-elysia/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YanChenBai/vite-elysia.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "ready": "vp run build && vp check && vp test --run",
+    "build": "vp pack",
+    "test": "vp run build && vp test --run",
+    "dev": "vp dev --config example/vite.config.ts",
+    "prepare": "vp config",
+    "prepack": "vp run build"
+  },
+  "dependencies": {
+    "env-runner": "catalog:",
+    "srvx": "catalog:"
+  },
+  "devDependencies": {
+    "@elysia/node": "catalog:",
+    "@stylistic/eslint-plugin": "catalog:",
+    "@types/node": "catalog:",
+    "elysia": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "peerDependencies": {
+    "elysia": "^1.4.30",
+    "vite": "^8.0.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.16.1",
+      "onFail": "download"
+    }
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}
